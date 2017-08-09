@@ -1,8 +1,13 @@
-version: "2"
+version: "3"
+networks:
+  mynetwork:
+    driver: overlay
 services:
   express:
-    build: .
-    hostname: myexpress
+    image: nodemon
     ports:
-        - "8080:8080"
-    restart: always
+      - 7777:7777
+    volumes:
+      - $PWD:/usr/src/app
+    networks:
+      - mynetwork

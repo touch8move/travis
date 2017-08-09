@@ -3,13 +3,13 @@
 const express = require('express');
 
 // 상수
-const PORT = 8080;
+const PORT = 7777;
 const HOST = '0.0.0.0';
 
 // 앱
 const app = express();
 app.get('/', (req, res) => {
-    res.send('Hello world\n');
+    res.send('Hello world  8\n');
 });
 
 app.listen(PORT, HOST);
